@@ -8,7 +8,9 @@ import { ChildComponent } from './child/child.component';
 import { HomeComponent } from './roating/home/home.component';
 import { NotFoundComponent } from './roating/not-found/not-found.component';
 import { AboutComponent } from './roating/about/about.component';
-import { ItemComponent } from './roating/item/item.component'
+import { ItemComponent } from './roating/item/item.component';
+import { ItemStatComponent } from './roating/item/item-stat/item-stat.component';
+import { ItemDetailsComponent } from './roating/item/item-details/item-details.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ItemComponent } from './roating/item/item.component'
     HomeComponent,
     NotFoundComponent,
     AboutComponent,
-    ItemComponent
+    ItemComponent,
+    ItemStatComponent,
+    ItemDetailsComponent
   ],
   imports: [
     FormsModule,
