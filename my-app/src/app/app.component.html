@@ -1,4 +1,26 @@
 <div>
     <h3>Маршрутизация в Angular</h3>
+    <ul class="nav">
+        <li routerLinkActive='active'
+            [routerLinkActiveOptions]='{exact: true}'>
+            <a routerLink=''>Главная</a>
+        </li>
+        <li routerLinkActive='active'
+            [routerLinkActiveOptions]='{exact: true}'>
+            <a routerLink='/about'>О сайте</a>
+        </li>
+        <li routerLinkActive='active'
+            [routerLinkActiveOptions]='{exact: true}'>
+            <a [routerLink]="['item', '5']"
+            [queryParams]="{'product': 'phone', 'price': 200}">Item 5</a>
+        </li>
+        <li routerLinkActive='active'
+            [routerLinkActiveOptions]='{exact: true}'>
+            <a [routerLink]="['item', '8']"
+            [queryParams]="{'product': 'tablet'}">Item 8</a>
+        </li>
+    </ul>
     <router-outlet></router-outlet>
+    <button (click)='goHome()'>На главную
+    </button>
 </div>

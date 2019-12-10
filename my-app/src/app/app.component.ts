@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnChanges, OnInit{
   name: string = 'Денис'
+
+  constructor(private router: Router) {}
+  goHome() {
+    this.router.navigate([''])
+  }
+
+  ngOnChanges() {
+    console.log('On changes'); 
+  }
+
+  ngOnInit() {}
 }

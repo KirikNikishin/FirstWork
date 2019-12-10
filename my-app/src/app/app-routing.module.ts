@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './roating/home/home.component';
 import { AboutComponent } from './roating/about/about.component';
 import { NotFoundComponent } from './roating/not-found/not-found.component';
-
+import { ItemComponent } from './roating/item/item.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: 'item/:id', component: ItemComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
