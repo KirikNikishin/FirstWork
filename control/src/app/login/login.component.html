@@ -4,4 +4,7 @@
         <input type="password" placeholder='Очень сложный пароль' [(ngModel)]='password' name="password"><br>
         <input type="submit" value="Заходи!">
     </form>
+    <div *ngIf='entered'>
+        <h1>Вы вошли</h1>
+    </div>
 </div>
