@@ -5,7 +5,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-    ngOnInit(): void {
-        throw new Error("Method not implemented.");
-    }
+  city: string;
+  country: string;
+  entered: boolean;
+  constructor(){}
+
+
+items=[]
+do(NewCity, NewCountry){
+  this.items.push({city: NewCity, country: NewCountry});}
+ngOnInit(){ 
+  this.city='London';
+  this.country='Great Britain'
+  this.entered= false}
 }

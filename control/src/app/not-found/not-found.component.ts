@@ -1,9 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-not-found',
-  templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css']
+  selector: 'my-app',
+  template: `<p>Такой страницы нет</p>
+  <div>
+                    <nav>
+                        <a routerLink="">Вернуться на главную</a>
+                    </nav>
+                    <router-outlet></router-outlet>
+               </div>`,
+styles: [` 
+    h1, h2{color:navy;}
+    p{font-size:13px; color:red; font-family:Verdana;}
+`]
 })
 export class NotFoundComponent implements OnInit {
   CurrentDate=Date.now()

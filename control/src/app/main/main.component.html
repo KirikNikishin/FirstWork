@@ -1,2 +1,16 @@
-<input type='text'style='background-color: #b5f9ff' placeholder="Ваше имя">
-<h1>Привет, {{name}}</h1>
+<h1>Добро пожаловать на главную страницу</h1>
+<div>
+    <form (ngSubmit)='MakeLogin()'>
+        <input type='text' placeholder="Введите город"
+        [(ngModel)]='city'
+        name='login'><br>
+        <input type="text" placeholder="Введите страну"
+        [(ngModel)]='country'
+        name="password"><br>
+        <input type="submit" value="Добавить" (click)='do(city, country)'>
+    </form>
+    <div *ngFor='let item of items'>
+        Город: {{item.city}}<br>
+        Страна: {{item.country}}
+    </div>
+</div>
